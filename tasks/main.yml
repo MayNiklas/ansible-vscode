@@ -10,3 +10,15 @@
 # TODO:
 # configure vscode dotfiles and extensions via ansible
 # make everything platform independent
+#
+# return list of installed extensions:
+# code --list-extensions
+#
+# install extension:
+# code --install-extension <extension>
+#
+# uninstall extension:
+# code --uninstall-extension <extension>
+#
+# dotfiles:
+# ~/Library/Application\ Support/Code/User/settings.json
