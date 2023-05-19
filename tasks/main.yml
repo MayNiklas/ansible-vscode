@@ -1,2 +1,12 @@
 ---
 # tasks file for ansible-vscode
+
+- name: Ensure vscode is installed
+  community.general.homebrew:
+    name: "visual-studio-code"
+    state: installed
+  when: ansible_distribution == "MacOSX"
+
+# TODO:
+# configure vscode dotfiles and extensions via ansible
+# make everything platform independent
