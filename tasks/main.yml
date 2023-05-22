@@ -2,9 +2,9 @@
 # tasks file for ansible-vscode
 
 - name: Ensure vscode is installed
-  community.general.homebrew:
-    name: "visual-studio-code"
-    state: installed
+  community.general.homebrew_cask:
+    name: visual-studio-code
+    state: present
   when: ansible_distribution == "MacOSX"
 
 # TODO:
