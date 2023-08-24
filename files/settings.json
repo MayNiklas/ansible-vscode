@@ -6,6 +6,12 @@
     "telemetry.telemetryLevel": "off",
     "redhat.telemetry.enabled": false,
     "editor.inlineSuggest.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nil",
+    "nix.serverSettings": {
+        "nil.formatting.command": "nixpkgs-fmt",
+    },
     "github.copilot.enable": {
         "*": true,
         "plaintext": true,
@@ -17,9 +23,6 @@
     },
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    },
-    "[nix]": {
-        "editor.defaultFormatter": "B4dM4n.nixpkgs-fmt"
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8"
