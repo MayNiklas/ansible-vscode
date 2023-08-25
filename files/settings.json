@@ -10,13 +10,22 @@
     "nix.enableLanguageServer": true,
     "nix.serverPath": "nil",
     "nix.serverSettings": {
-        "nil.formatting.command": "nixpkgs-fmt",
+        "nil": {
+            "formatting": {
+                "command": [
+                    "nixpkgs-fmt"
+                ]
+            }
+        }
     },
     "github.copilot.enable": {
         "*": true,
         "plaintext": true,
         "markdown": true,
         "scminput": false
+    },
+    "[nix]": {
+        "editor.defaultFormatter": "jnoortheen.nix-ide"
     },
     "[go]": {
         "editor.defaultFormatter": "golang.go"
