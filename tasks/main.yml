@@ -13,19 +13,27 @@
     dest: "{{ ansible_env.HOME }}/Library/Application Support/Code/User/settings.json"
     state: link
   when: ansible_distribution == "MacOSX"
-#
-# TODO:
-# configure vscode dotfiles and extensions via ansible
-# make everything platform independent
-#
-# return list of installed extensions:
-# code --list-extensions
-#
-# install extension:
-# code --install-extension <extension>
-#
-# uninstall extension:
-# code --uninstall-extension <extension>
+
+- name: Get installed vscode extensions
+  shell: code --list-extensions
+  register: vscode_extensions_installed
+  when: ansible_distribution == "MacOSX"
+
+- name: Print installed vscode extensions
+  ansible.builtin.debug:
+    msg: "{{ vscode_extensions_installed.stdout_lines }}"
+  when: ansible_distribution == "MacOSX"
+
+- name: Install vscode extensions
+  ansible.builtin.command: code --install-extension "{{ item }}"
+  loop: "{{ vscode_extensions | difference(vscode_extensions_installed.stdout_lines) }}"
+  when: ansible_distribution == "MacOSX"
+
+- name: Uninstall vscode extensions
+  ansible.builtin.command: code --uninstall-extension "{{ item }}"
+  loop: "{{ vscode_extensions_installed.stdout_lines | difference(vscode_extensions) }}"
+  when: ansible_distribution == "MacOSX"
+
 #
 # dotfiles:
 # ~/Library/Application\ Support/Code/User/settings.json
