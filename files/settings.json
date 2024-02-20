@@ -6,6 +6,7 @@
     "telemetry.telemetryLevel": "off",
     "redhat.telemetry.enabled": false,
     "editor.inlineSuggest.enabled": true,
+    "files.autoSave": "afterDelay",
     "diffEditor.ignoreTrimWhitespace": false,
     "nix.enableLanguageServer": true,
     "nix.serverPath": "nil",
@@ -24,6 +25,7 @@
         "markdown": true,
         "scminput": false
     },
+    "githubPullRequests.pullBranch": "never",
     "[nix]": {
         "editor.defaultFormatter": "jnoortheen.nix-ide"
     },
@@ -35,6 +37,9 @@
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8",
