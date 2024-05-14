@@ -44,5 +44,6 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8",
         "editor.formatOnSave": true
-    }
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh"
 }
