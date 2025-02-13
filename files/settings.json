@@ -18,8 +18,10 @@
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "diffEditor.ignoreTrimWhitespace": false,
-    "editor.fontFamily": "Hack Nerd Font",
-    "editor.inlineSuggest.enabled": true,
+    "editor": {
+        "fontFamily": "Hack Nerd Font",
+        "inlineSuggest.enabled": true
+    },
     "files.autoSave": "afterDelay",
     "files.exclude": {
         "**/.trunk/*actions/": true,
@@ -35,24 +37,37 @@
         "**/.trunk/*out/": true,
         "**/.trunk/*plugins/": true
     },
-    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot": {
+        "editor.enableAutoCompletions": true,
+        "enable": {
+            "*": false,
+            "c": true,
+            "markdown": true,
+            "nix": true,
+            "plaintext": true
+        }
+    },
     "github.copilot.enable": {
         "*": false,
         "c": true,
+        "jsonc": true,
         "markdown": true,
         "nix": true,
-        "plaintext": true
+        "plaintext": true,
+        "scminput": false
     },
     "githubPullRequests.pullBranch": "never",
     "latex-workshop.formatting.latex": "latexindent",
-    "nix.enableLanguageServer": true,
-    "nix.serverPath": "nil",
-    "nix.serverSettings": {
-        "nil": {
-            "formatting": {
-                "command": [
-                    "nixpkgs-fmt"
-                ]
+    "nix": {
+        "enableLanguageServer": true,
+        "serverPath": "nil",
+        "serverSettings": {
+            "nil": {
+                "formatting": {
+                    "command": [
+                        "nixpkgs-fmt"
+                    ]
+                }
             }
         }
     },
