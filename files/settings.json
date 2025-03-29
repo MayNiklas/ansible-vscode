@@ -17,6 +17,9 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
+    "[latex]": {
+        "editor.wordWrap": "on"
+    },
     "diffEditor.ignoreTrimWhitespace": false,
     "editor": {
         "fontFamily": "Hack Nerd Font",
